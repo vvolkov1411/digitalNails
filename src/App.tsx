@@ -4,6 +4,7 @@ const tg = window.Telegram.WebApp;
 const App = () => {
   useEffect(() => {
     tg.ready();
+    tg.expand();
   }, []);
 
   const onClose = () => {
@@ -12,7 +13,6 @@ const App = () => {
 
   return (
     <div>
-      <button onClick={onClose}>Close</button>
       <p>{tg.initDataUnsafe.user.photo_url}</p>
       <img
         src={tg.initDataUnsafe.user.photo_url}
