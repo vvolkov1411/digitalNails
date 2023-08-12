@@ -5,17 +5,17 @@ export async function useTelegram() {
     tg.close();
   };
 
-  const onToggleButton = () => {
-    if (tg.MainButton.isVisible) {
-      tg.MainButton.hide();
-    } else {
-      tg.MainButton.show();
-    }
-  };
+  // const onToggleButton = () => {
+  //   if (tg.MainButton.isVisible) {
+  //     tg.MainButton.hide();
+  //   } else {
+  //     tg.MainButton.show();
+  //   }
+  // };
 
   return {
     onClose,
-    onToggleButton,
+    // onToggleButton,
     tg,
     user: tg.initDataUnsafe?.user,
   };

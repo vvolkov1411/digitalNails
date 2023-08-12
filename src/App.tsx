@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-
 import { useTelegram } from "./hooks/useTelegram.js";
 
 const App = () => {
