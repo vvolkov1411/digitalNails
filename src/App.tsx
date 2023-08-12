@@ -13,7 +13,7 @@ const App = () => {
   return (
     <div>
       <button onClick={onClose}>Close</button>
-      <p>{tg.initDataUnsafe?.user?.photo_url}</p>
+      <p>{tg.initDataUnsafe.user.photo_url}</p>
       <img
         src={tg.initDataUnsafe.user.photo_url}
         style={{ width: 40, height: 40 }}
