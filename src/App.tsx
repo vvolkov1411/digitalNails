@@ -5,6 +5,7 @@ const App = () => {
   useEffect(() => {
     tg.ready();
     tg.expand();
+    alert(tg.initDataUnsafe.user.photo_url);
   }, []);
 
   const onClose = () => {
