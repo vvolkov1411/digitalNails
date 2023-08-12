@@ -1,11 +1,12 @@
 import { useEffect } from "react";
 const tg = window.Telegram.WebApp;
+const user = window.Telegram.WebAppUser;
 
 const App = () => {
   useEffect(() => {
     tg.ready();
     tg.expand();
-    alert(tg.user?.photo_url);
+    alert(user?.photo_url);
   }, []);
 
   const onClose = () => {
@@ -14,8 +15,7 @@ const App = () => {
 
   return (
     <div>
-      <p>{tg.initDataUnsafe.user.photo_url}</p>
-      <img src={tg.user?.photo_url} style={{ width: 40, height: 40 }} alt="" />
+      <img src={user?.photo_url} style={{ width: 40, height: 40 }} alt="" />
       <p>{tg.initDataUnsafe.user.first_name}</p>
       <p>{tg.hash}</p>
     </div>
