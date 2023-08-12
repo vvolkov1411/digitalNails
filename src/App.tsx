@@ -1,17 +1,20 @@
 import { useEffect } from "react";
-import { useTelegram } from "./hooks/useTelegram.js";
+const tg = window.Telegram.WebApp;
 
 const App = () => {
-  const { tg, user, onClose } = useTelegram();
-
   useEffect(() => {
     tg.ready();
   });
 
+  const onClose = () => {
+    tg.close();
+  };
+
   return (
     <div>
       <button onClick={onClose}>Close</button>
-      <p>{user?.username}</p>
+      <p>{tg.user?.username}</p>
+      <pre>{tg.user}</pre>
     </div>
   );
 };
