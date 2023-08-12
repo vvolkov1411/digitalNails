@@ -4,7 +4,7 @@ const tg = window.Telegram.WebApp;
 const App = () => {
   useEffect(() => {
     tg.ready();
-  });
+  }, []);
 
   const onClose = () => {
     tg.close();
@@ -14,7 +14,9 @@ const App = () => {
     <div>
       <button onClick={onClose}>Close</button>
       <p>{tg.user?.username}</p>
-      <pre>{tg.user}</pre>
+      <p>{tg.user?.first_name}</p>
+      <p>{tg.user?.last_name}</p>
+      <p>{tg.user?.is_premium}</p>
     </div>
   );
 };
