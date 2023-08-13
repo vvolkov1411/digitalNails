@@ -18,8 +18,13 @@ const Header = () => {
           />
         </svg>
       </div>
-      <div className="userName">
-        <p>{tg.WebAppUser?.user?.username ?? "nana"}</p>
+      <div
+        className="userName"
+        onClick={() => {
+          tg.HapticFeedback.impactOccurred("light");
+        }}
+      >
+        <p>{tg.WebAppChat?.username ?? "nana"}</p>
         {tg.initDataUnsafe.user?.first_name ?? "alfabank"}{" "}
       </div>
     </div>
