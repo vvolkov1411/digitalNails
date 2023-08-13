@@ -19,7 +19,7 @@ const Header = () => {
         </svg>
       </div>
       <div className="userName">
-        <p>{tg.user?.username ?? "nana"}</p>
+        <p>{window.Telegram.WebAppUser?.username ?? "nana"}</p>
         {tg.initDataUnsafe.user?.first_name ?? "alfabank"}{" "}
       </div>
     </div>
