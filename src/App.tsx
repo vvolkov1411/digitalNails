@@ -6,7 +6,7 @@ const App = () => {
   useEffect(() => {
     tg.ready();
     tg.expand();
-    alert(user?.photo_url);
+    alert(user);
   }, []);
 
   const onClose = () => {
@@ -15,7 +15,11 @@ const App = () => {
 
   return (
     <div>
-      <img src={user?.photo_url} style={{ width: 40, height: 40 }} alt="" />
+      <img
+        src={tg.initDataUnsafe.user?.photo_url}
+        style={{ width: 40, height: 40 }}
+        alt=""
+      />
       <p>{tg.initDataUnsafe.user.first_name}</p>
       <p>{tg.hash}</p>
     </div>
