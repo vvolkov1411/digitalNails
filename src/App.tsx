@@ -9,10 +9,6 @@ const App = () => {
     tg.expand();
   }, []);
 
-  const onClose = () => {
-    tg.close();
-  };
-
   return (
     <div className="container">
       <Header />
