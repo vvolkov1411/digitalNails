@@ -9,6 +9,9 @@
   border-radius: 12px;
   gap: 12px;
 }
+.searchBar .icon {
+  margin-top: 2px;
+}
 .searchBar input {
   width: 100%;
   font-size: 17px;
@@ -16,6 +19,7 @@
   border: none;
   background: transparent;
   margin-top: -2px;
+  color: var(--tg-theme-text-color);
 }
 .searchBar input::placeholder {
   color: var(--tg-theme-hint-color);
