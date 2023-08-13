@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import Header from "./components/Header/Header";
+import SearchBar from "./components/SearchBar/SearchBar";
 const tg = window.Telegram.WebApp;
 
 const App = () => {
@@ -15,6 +16,7 @@ const App = () => {
   return (
     <div className="container">
       <Header />
+      <SearchBar />
     </div>
   );
 };
